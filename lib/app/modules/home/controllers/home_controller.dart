@@ -1,20 +1,20 @@
+import 'package:flutter/material.dart';
+import 'package:fortune4_kyc_app/app/data/size.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
   @override
   void onReady() {
+    initializeHeightAndWidth();
     super.onReady();
   }
 
-  @override
-  void onClose() {}
-  void increment() => count.value++;
+  // Initialize height and width
+  void initializeHeightAndWidth() {
+    height = MediaQuery.of(Get.context!).size.height;
+    width = MediaQuery.of(Get.context!).size.width;
+  }
+
+  // Navigate to
+  void navigateTo() {}
 }
